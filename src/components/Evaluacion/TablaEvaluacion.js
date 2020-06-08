@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import Icon from "@material-ui/core/Icon";
+import React from "react";
 import { Link } from "react-router-dom";
-import SweetAlert from "../SweetAlert";
 import Table from "react-bootstrap/Table";
 
 export const EvaluacionTabla = (props) => {

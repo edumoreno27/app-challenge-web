@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, {  Fragment } from "react";
 import PageLoading from "../../components/PageLoading";
 
 import EvaluacionService from "../../services/Evaluacion";
@@ -21,7 +21,7 @@ class EvaluacionRegistrar extends React.Component {
     if (valid) {
       this.setState({ loading: true });
       const dataResponse = await evaluationService.RegistrarEvaluacion(data);
-      if (dataResponse.status == 201) {
+      if (dataResponse.status === 201) {
         this.setState({ loading: false});
         sweetAlert.alertSuccess("Evaluación registrada correctamente", () =>
         this.props.history.push("/")

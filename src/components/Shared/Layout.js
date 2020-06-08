@@ -1,7 +1,5 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Row from "react-bootstrap/Row";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 function Layout(props) {

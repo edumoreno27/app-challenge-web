@@ -1,13 +1,12 @@
-import React, { useState, Fragment } from "react";
+import React, {  Fragment } from "react";
 import Row from "react-bootstrap/Row";
-import SweetAlert from "../../components/SweetAlert";
+
 import PageLoading from '../../components/PageLoading';
 import EvaluacionService from "../../services/Evaluacion";
 import Layout from "../../components/Shared/Layout";
 import { BuscarEvaluacionForm } from "../../components/Evaluacion/BuscarEvaluacionForm";
 import { EvaluacionTabla } from "../../components/Evaluacion/TablaEvaluacion";
 
-const sweetAlert = new SweetAlert();
 const evaluationService = new EvaluacionService();
 
 class EvaluacionList extends React.Component {
@@ -31,7 +30,7 @@ class EvaluacionList extends React.Component {
       fechainicio,
       fechafin
     );
-    if (data.status == 200) {
+    if (data.status === 200) {
         this.setState({ loading: false });
       this.setState({ list: data.response });
     } else {

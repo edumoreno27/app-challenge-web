@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, {  Fragment } from "react";
 import PageLoading from "../../components/PageLoading";
 
 import EvaluacionService from "../../services/Evaluacion";
@@ -22,7 +22,7 @@ class EvaluacionEditar extends React.Component {
     const data = await evaluationService.ObtenerEvaluacion(
       this.state.evaluacionId
     );
-    if (data.status == 200) {
+    if (data.status === 200) {
       this.setState({ evaluacion: data.response });
       this.setState({ loading: false });
     } else {
@@ -44,7 +44,7 @@ class EvaluacionEditar extends React.Component {
         this.state.evaluacionId,
         data
       );
-      if (dataResponse.status == 200) {
+      if (dataResponse.status === 200) {
         this.setState({ loading: false });
         sweetAlert.alertSuccess("Evaluación actualizada correctamente", () =>
           this.props.history.push("/")
