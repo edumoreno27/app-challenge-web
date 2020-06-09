@@ -6,6 +6,7 @@ Prueba técnica Web -  Consumer Satisfaction v .1.1
 _Tener instalado Docker o Node.js_
 _Esta aplicación puede ser ejecutada de manera local o puede ser dockerizada_
 
+
 ### Primero, se deben instalar los paquetes mediante el siguiente comando###
 ```
 $  yarn install 
@@ -14,8 +15,15 @@ $  yarn install
 ### Ejecutar la web de manera local ###
 
 ```
-$  npm start
+$  yarn start
 ```
+
+### Comando para ejecutar pruebas unitarias ###
+
+```
+$  yarn test
+```
+
 ### Pasos para dockerizar la aplicación ###
 _1) Generar el build_
 
